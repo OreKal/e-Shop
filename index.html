@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini E-shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>E-shop</h1>
+        </header>
+
+        <main class="shop-layout">
+            <aside class="sidebar">
+                <h2>Φίλτρα</h2>
+                <div class="filter-group">
+                    <label>Αναζήτηση</label>
+                    <input type="text" id="searchInput" placeholder="Αναζήτηση προϊόντος...">
+                </div>
+
+                <div class="filter-group">
+                    <label>Κατηγορία</label>
+                    <select id="categoryFilter">
+                        <option value="all">Όλες οι κατηγορίες</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Keyboard">Keyboard</option>
+                        <option value="Graphics Card">Graphics Card</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Μέγιστη Τιμή: <span id="priceValue">2000</span>€</label>
+                    <input type="range" id="priceFilter" min="0" max="2000" step="50" value="2000">
+                </div>
+
+                <div class="filter-group">
+                    <label>Ταξινόμηση</label>
+                    <select id="sortSelect">
+                        <option value="name">Όνομα (Α-Ω)</option>
+                        <option value="priceAsc">Τιμή (Χαμηλή σε Υψηλή)</option>
+                        <option value="priceDesc">Τιμή (Υψηλή σε Χαμηλή)</option>
+                        <option value="rating">Βαθμολογία</option>
+                    </select>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <h2>Προϊόντα</h2>
+                <div id="productsGrid" class="products-grid">
+                    </div>
+            </section>
+
+            <aside class="cart-section">
+                <h2>Το Καλάθι μου</h2>
+                <div id="cartItems" class="cart-items">
+                    </div>
+                <div class="cart-summary">
+                    <p>Σύνολο: <strong id="cartTotal">0.00€</strong></p>
+                    <button id="checkoutBtn" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Ολοκλήρωση</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
